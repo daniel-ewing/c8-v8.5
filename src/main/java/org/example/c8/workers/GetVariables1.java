@@ -24,6 +24,7 @@ public class GetVariables1 {
         Map<String, Object> variables = job.getVariablesAsMap();
         Integer anInteger1 = (Integer)variables.get("anInteger1");
         String aString1 = (String)variables.get("aString1");
+
         if (log.isDebugEnabled()) log.debug("-----> {}: anInteger1 = {}, aString1 = {}", methodName, anInteger1, aString1);
 
         // This is useful for when special handling of successful and / or unsuccessful job completion is necessary.
