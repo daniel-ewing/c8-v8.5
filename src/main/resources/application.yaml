@@ -1,111 +1,25 @@
 ## Local Zeebe Cluster
 zeebe:
-  authorization:
-    server:
-      url: http://127.0.0.1:18080/auth/realms/camunda-platform/protocol/openid-connect/token
+  audience: zeebe-api
   client:
     broker:
-      # zeebe.client.broker.gateway-address is deprecated since 8.5.0.
-      grpc-address: http://127.0.0.1:26500
-      rest-address: http://127.0.0.1:8080
-#    connection-mode: ADDRESS # Connection mode can be set to "CLOUD" (SaaS) or "ADDRESS" (Self-Managed).
-#    default-tenant-id: "test"
-#    default-job-worker-stream-enabled: false
-#    default-job-worker-tenant-ids: "test"
-    id: zeebe
-#    message:
-#      timeToLive: P7D
-    secret: Camunda1
+      grpc-address: https://grpc-zeebe.c8.local
+      rest-address: https://c8.local/zeebe
+    cloud:
+      auth-url: https://c8.local/auth/realms/camunda-platform/protocol/openid-connect/token
+      client-id: zeebe
+      client-secret: Camunda1
+    connection-mode: ADDRESS
     security:
-#      cert-path: /home/administrator/software/camunda/camunda-platform-8/certificates/c8.crt
-      plaintext: true
-  token:
-    audience: "zeebe-api"
+      cert-path: /home/administrator/software/camunda/camunda-platform-8/certificates/c8.crt
+      plaintext: false
     worker:
       max-jobs-active: 32
       threads: 2
-
-#camunda:
-#  client:
-#    zeebe:
-#      execution-threads: 2
-#      message-time-to-live: PT1H
-#      max-message-size: 4
-#      request-timeout: PT10S
-##      ca-certificate-path: path/to/certificate
-#      keep-alive: PT45S
-##      override-authority: host:port
-#      prefer-rest-over-grpc: true
-#      grpc-address: http://localhost:26500
-#      rest-address: http://localhost:8080
-#      defaults:
-##        type: foo
-#        max-jobs-active: 32
-
-#camunda:
-#  client:
-#    mode: self-managed
-#    security:
-#      #      cert-path: /usr/local/share/ca-certificates/dev.c8.separated.crt
-#      plaintext: true
-##    tenant-id: <default>
-#    auth:
-##      method: basic
-##      username: demo
-##      password: demo
-#      audience: zeebe-api
-#      client-id: zeebe
-##      audience: orchestration-api
-##      client-id: orchestration
-#      client-secret: Camunda1
-#      token-url: http://localhost:18080/auth/realms/camunda-platform/protocol/openid-connect/token
-#    grpc-address: http://localhost:26500
-#    rest-address: http://localhost:8080
-#    zeebe:
-#      enabled: true
-#      grpc-address: http://localhost:26500
-#      rest-address: http://localhost:8080
-#      prefer-rest-over-grpc: false
-#      audience: zeebe-api
-##      audience: orchestration-api
-##      scope: # optional
-##      defaults:
-##        stream-enabled: false
-
-#zeebe:
-#  client:
-#    worker:
-#      stream:
-#        enabled: false
-#camunda:
-#  client:
-#    mode: saas
-#    auth:
-#      client-id:
-#      client-secret:
-#    cloud:
-#      cluster-id:
-#      region: lpp-1
-##    zeebe:
-##      defaults:
-##        stream-enabled: true
-
-
-#camunda:
-#  client:
-#    mode: saas
-#    auth:
-#      client-id:
-#      client-secret:
-#    cloud:
-#      cluster-id:
-#      region: lpp-1
-##    zeebe:
-##      defaults:
-##        stream-enabled: true
 
 logging:
 #  file:
 #    path: ./logs           # specify a path to write to file, otherwise it defaults to the console.
   level:
+#    root: DEBUG
     org.example.c8: DEBUG
