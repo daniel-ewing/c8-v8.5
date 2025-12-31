@@ -18,8 +18,8 @@ zeebe:
       threads: 2
 
 logging:
-#  file:
-#    path: ./logs           # specify a path to write to file, otherwise it defaults to the console.
+  #  file:
+  #    path: ./logs           # specify a path to write to file, otherwise it defaults to the console.
   level:
-#    root: DEBUG
+    org.example: INFO
     org.example.c8: DEBUG

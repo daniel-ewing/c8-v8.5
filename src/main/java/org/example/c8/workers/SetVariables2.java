@@ -1,6 +1,5 @@
 package org.example.c8.workers;
 
-
 import io.camunda.zeebe.client.api.response.ActivatedJob;
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.example.c8.Application.isLogJobEnabled;
-import static org.example.c8.utilities.Loggers.*;
+import static org.example.c8.utilities.Loggers.logJob;
 
 @Component
 @Slf4j
@@ -18,16 +17,16 @@ public class SetVariables2 {
 
     @JobWorker(type = "setVariables2")
     public Map<String, Object> handleSetVariables2(final ActivatedJob job) {
-        String methodName = "handleSetVariables2";
+        final String methodName = "handleSetVariables2";
 
-        if (log.isDebugEnabled()) logDebugEnterJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Enter job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         if (isLogJobEnabled) logJob(methodName, job, null);
 
         Map<String, Object> variablesMap = new HashMap<>();
         variablesMap.put("aLong1", 21474836478L);
         variablesMap.put("aDouble1", 10293.84756D);
 
-        if (log.isDebugEnabled()) logDebugExitJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Exit job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         return variablesMap;
     }
 }
