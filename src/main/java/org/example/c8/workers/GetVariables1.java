@@ -9,22 +9,21 @@ import org.springframework.stereotype.Component;
 import java.util.Map;
 
 import static org.example.c8.Application.isLogJobEnabled;
-import static org.example.c8.utilities.Loggers.*;
+import static org.example.c8.utilities.Loggers.logJob;
 
 @Component
 @Slf4j
 public class GetVariables1 {
     @JobWorker(type = "getVariables1", autoComplete = false)
     public void handleGetVariables1(final JobClient client, final ActivatedJob job) {
-        String methodName = "handleGetVariables1";
+        final String methodName = "handleGetVariables1";
 
-        if (log.isDebugEnabled()) logDebugEnterJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Enter job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         if (isLogJobEnabled) logJob(methodName, job, null);
 
         Map<String, Object> variables = job.getVariablesAsMap();
         Integer anInteger1 = (Integer)variables.get("anInteger1");
         String aString1 = (String)variables.get("aString1");
-
         if (log.isDebugEnabled()) log.debug("-----> {}: anInteger1 = {}, aString1 = {}", methodName, anInteger1, aString1);
 
         // This is useful for when special handling of successful and / or unsuccessful job completion is necessary.
@@ -38,6 +37,6 @@ public class GetVariables1 {
                     }
                 });
 
-        if (log.isDebugEnabled()) logDebugExitJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Exit job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
     }
 }

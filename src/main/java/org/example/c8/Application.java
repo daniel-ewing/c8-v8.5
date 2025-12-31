@@ -17,8 +17,8 @@ public class Application {
     public final static boolean isLogInstanceEnabled = false;
     public final static boolean isLogJobEnabled = false;
     public final static boolean isStartInstancesByPeriod = false;
-    public final static boolean isStartInstancesByCounter = false;
-    public final static boolean isStartInstancesByDataGenerator = true;
+    public final static boolean isStartInstancesByCounter = true;
+    public final static boolean isStartInstancesByDataGenerator = false;
     public final static boolean isStartInstancesAsynchronous = true;
 //    public final static String defaultProcessKey = "process";
     public final static String defaultProcessKey = "simple-variables";

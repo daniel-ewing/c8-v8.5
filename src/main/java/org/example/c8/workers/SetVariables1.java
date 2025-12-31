@@ -1,6 +1,5 @@
 package org.example.c8.workers;
 
-
 import io.camunda.zeebe.client.api.response.ActivatedJob;
 import io.camunda.zeebe.client.api.worker.JobClient;
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
@@ -8,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import static org.example.c8.Application.isLogJobEnabled;
-import static org.example.c8.utilities.Loggers.*;
+import static org.example.c8.utilities.Loggers.logJob;
 
 @Component
 @Slf4j
@@ -16,9 +15,9 @@ public class SetVariables1 {
 
     @JobWorker(type = "setVariables1", autoComplete = false)
     public void handleSetVariables1(final JobClient client, final ActivatedJob job) {
-        String methodName = "handleSetVariables1";
+        final String methodName = "handleSetVariables1";
 
-        if (log.isDebugEnabled()) logDebugEnterJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Enter job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         if (isLogJobEnabled) logJob(methodName, job, null);
 
         String variables =
@@ -38,6 +37,6 @@ public class SetVariables1 {
                     }
                 });
 
-        if (log.isDebugEnabled()) logDebugExitJob(methodName, job);
+        if (log.isDebugEnabled()) log.debug("-----> {}: Exit job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
     }
 }
