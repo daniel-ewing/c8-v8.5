@@ -1,12 +1,12 @@
-package org.example.c8.workers;
+package org.example.workers;
 
 import io.camunda.zeebe.client.api.response.ActivatedJob;
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
-import static org.example.c8.Application.isLogJobEnabled;
-import static org.example.c8.utilities.Loggers.logJob;
+import static org.example.Application.isLogJobEnabled;
+import static org.example.utilities.Loggers.logJob;
 
 @Component
 @Slf4j

@@ -1,4 +1,4 @@
-package org.example.c8.workers;
+package org.example.workers;
 
 import io.camunda.zeebe.client.api.response.ActivatedJob;
 import io.camunda.zeebe.spring.client.annotation.JobWorker;
@@ -8,23 +8,24 @@ import org.springframework.stereotype.Component;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.example.c8.Application.isLogJobEnabled;
-import static org.example.c8.utilities.Loggers.logJob;
+import static org.example.Application.isLogJobEnabled;
+import static org.example.configuration.JavaTimeConfigurator.getDateTime;
+import static org.example.utilities.Loggers.logJob;
 
 @Component
 @Slf4j
-public class SetVariables2 {
+public class SetVariables3 {
 
-    @JobWorker(type = "setVariables2")
-    public Map<String, Object> handleSetVariables2(final ActivatedJob job) {
-        final String methodName = "handleSetVariables2";
+    @JobWorker(type = "setVariables3")
+    public Map<String, Object> handleSetVariables3(final ActivatedJob job) {
+        final String methodName = "handleSetVariables3";
 
         if (log.isDebugEnabled()) log.debug("-----> {}: Enter job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         if (isLogJobEnabled) logJob(methodName, job, null);
 
         Map<String, Object> variablesMap = new HashMap<>();
-        variablesMap.put("aLong1", 21474836478L);
-        variablesMap.put("aDouble1", 10293.84756D);
+        variablesMap.put("aBoolean1", true);
+        variablesMap.put("aDate1", getDateTime());
 
         if (log.isDebugEnabled()) log.debug("-----> {}: Exit job {} of instance {}",  methodName, job.getKey(), job.getProcessInstanceKey());
         return variablesMap;
