@@ -5,24 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="15fdc4a9-3e62-45e3-bdc5-67a4425d4532" name="Changes" comment="Initial commit.">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/configuration/JavaTimeConfigurator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/starters/PeriodicProcessStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/starters/SimpleProcessStarter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/utilities/Loggers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/c8/utilities/VariableGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/pojo-variables.bpmn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/process.bpmn" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bpmn/simple-variables.bpmn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/configuration/JavaTimeConfigurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/configuration/JavaTimeConfigurator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/starters/DataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/starters/DataGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/starters/ProcessInstanceStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/starters/ProcessInstanceStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/utilities/Loggers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/Loggers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/utilities/VariableGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utilities/VariableGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/GetVariables1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/GetVariables1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/GetVariables2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/GetVariables2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/GetVariables3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/GetVariables3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/SetVariables1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/SetVariables1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/SetVariables2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/SetVariables2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/c8/workers/SetVariables3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/workers/SetVariables3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +42,9 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="35nuPxXKYBAzhpLw9ReIAgPPzvb" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -57,6 +54,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Application.executor": "Run",
+    "Maven.c8-v8.5 [clean].executor": "Run",
+    "Maven.c8-v8.5 [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
@@ -78,13 +77,13 @@
   <component name="RunManager">
     <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="-Djavax.net.ssl.trustStore" value="$USER_HOME$/software/camunda/camunda-platform-8/certificates/c8.jks -Djavax.net.ssl.trustStorePassword=changeit" />
+        <env name="JAVA_TOOL_OPTIONS" value="-Djavax.net.ssl.trustStore=$USER_HOME$/software/camunda/camunda-platform-8/certificates/c8.jks -Djavax.net.ssl.trustStorePassword=changeit" />
       </envs>
-      <option name="MAIN_CLASS_NAME" value="org.example.c8.Application" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Application" />
       <module name="c8-v8.5" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.c8.*" />
+          <option name="PATTERN" value="org.example.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
